@@ -2,6 +2,11 @@
     text-align: center;
 }
 
+#button-random-color {
+    width: 150px;
+    margin-left: 600px;
+    margin-right: auto;
+}
 #color-palette {
     display: inline-block;
     width: 1000px;
@@ -23,7 +28,7 @@
 }
 
 #color2 {
-    background-color: red;
+    background-color: red
 }
 
 #color3 {
