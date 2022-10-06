@@ -38,3 +38,40 @@
 #color4 {
     background-color: green;
 }
+
+
+/* .pixel{
+    width: 40px; height: 40px;
+    border: 1px solid black;
+    display:inline-block;
+    background-color: white;
+    margin: -0.5px;
+} */
+
+/* .pixel {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 50px;
+    border-radius: 20%;
+    margin-left: 10px;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+} */
+
+.pixel{
+
+    width: 40px; height: 40px;
+    border: 1px solid black;
+    display:inline-block;
+    background-color: white;
+    margin: -0.5px;
+
+
+
+}
+#pixel-board{
+    width: 210px; height: 210px; 
+    font-size: 0;
+    margin-left: 569px
+}

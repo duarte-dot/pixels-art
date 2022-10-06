@@ -77,3 +77,13 @@ function checkKey() {
 }
 
 
+let quadro = document.getElementById('pixel-board')
+
+
+for (let i = 1; i <= 25; i++) {
+  // for (let i = 0; i <= 6; i++) {
+  let quadrados = document.createElement('div')
+  quadrados.className = 'pixel'
+  quadro.appendChild(quadrados)
+  // }
+}
