@@ -6,6 +6,7 @@ window.onload = function() {
   let color4 = document.getElementById('color4')
   
 
+  document.getElementById('color1').className += ' selected'
 
 function generateColor() {
   const letters = '0123456789ABCDEF';
