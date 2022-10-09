@@ -7,6 +7,12 @@ window.onload = function() {
   let color3 = document.getElementById('color3')
   let color4 = document.getElementById('color4')
   
+  
+  color1.style.backgroundColor = 'black'
+  color2.style.backgroundColor = 'red'
+  color3.style.backgroundColor = 'green'
+  color4.style.backgroundColor = 'blue'
+
 
   color1.className = 'color selected'
 
@@ -40,6 +46,7 @@ color1.addEventListener("click", function() {
   color2.className = 'color'
   color3.className = 'color'
   color4.className = 'color'
+  paintPixels();
 })
 
 color2.addEventListener("click", function() {
@@ -47,6 +54,7 @@ color2.addEventListener("click", function() {
   color2.className = 'color selected'
   color3.className = 'color'
   color4.className = 'color'
+  paintPixels();
 
 })
 
@@ -55,6 +63,7 @@ color3.addEventListener("click", function() {
   color2.className = 'color'
   color3.className = 'color selected'
   color4.className = 'color'
+  paintPixels();
 })
 
 color4.addEventListener("click", function() {
@@ -62,8 +71,11 @@ color4.addEventListener("click", function() {
   color2.className = 'color'
   color3.className = 'color'
   color4.className = 'color selected'
+  paintPixels();
+
 })
 
+paintPixels();
 
 checkKey();
 
@@ -102,6 +114,25 @@ for (let i = 1; i <= 25; i++) {
   quadro.appendChild(quadrados)
 }
 
+
 function paintPixels() {
-  document.getElementById('pixel-board').children[1]
+  for (let i = 0; i < document.getElementById('pixel-board').children.length; i++)
+
+  if (color1.className === 'color selected') {
+    document.getElementById('pixel-board').children[i].addEventListener("click", function() {
+      document.getElementById('pixel-board').children[i].style.backgroundColor = color1.style.backgroundColor
+      })
+  } else if (color2.className === 'color selected') {
+    document.getElementById('pixel-board').children[i].addEventListener("click", function() {
+      document.getElementById('pixel-board').children[i].style.backgroundColor = color2.style.backgroundColor
+    })
+  } else if (color3.className === 'color selected') {
+    document.getElementById('pixel-board').children[i].addEventListener("click", function() {
+      document.getElementById('pixel-board').children[i].style.backgroundColor = color3.style.backgroundColor
+    })
+  } else if (color4.className === 'color selected') {
+    document.getElementById('pixel-board').children[i].addEventListener("click", function() {
+      document.getElementById('pixel-board').children[i].style.backgroundColor = color4.style.backgroundColor
+    })
+  }
 }
