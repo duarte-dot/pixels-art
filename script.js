@@ -59,7 +59,6 @@ color2.addEventListener("click", function() {
   color3.className = 'color'
   color4.className = 'color'
   paintPixels();
-
 })
 
 color3.addEventListener("click", function() {
@@ -76,13 +75,11 @@ color4.addEventListener("click", function() {
   color3.className = 'color'
   color4.className = 'color selected'
   paintPixels();
-
 })
 
 paintPixels();
 
 checkKey();
-
 
 }
 
@@ -96,6 +93,8 @@ function addClassToLocalStorage() {
 
 
 function checkKey() {
+  for (let i = 0; i < document.getElementById('pixel-board').children.length; i++)
+  
   if (localStorage.getItem('colorPalette') === null) {
     localStorage.setItem('colorPalette', 'color2' + ', ' + 'color3' + ', ' + 'color4')
     localStorage.setItem('color2', 'color2')
@@ -121,11 +120,11 @@ for (let i = 1; i <= 25; i++) {
 
 function paintPixels() {
   for (let i = 0; i < document.getElementById('pixel-board').children.length; i++)
-
+  
   if (color1.className === 'color selected') {
     document.getElementById('pixel-board').children[i].addEventListener("click", function() {
       document.getElementById('pixel-board').children[i].style.backgroundColor = color1.style.backgroundColor
-      })
+    })
   } else if (color2.className === 'color selected') {
     document.getElementById('pixel-board').children[i].addEventListener("click", function() {
       document.getElementById('pixel-board').children[i].style.backgroundColor = color2.style.backgroundColor
