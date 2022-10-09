@@ -1,12 +1,13 @@
 window.onload = function() {
   
   let buttonRandomColor = document.getElementById('button-random-color');
+  let color1 = document.getElementById('color1')
   let color2 = document.getElementById('color2')
   let color3 = document.getElementById('color3')
   let color4 = document.getElementById('color4')
   
 
-  document.getElementById('color1').className += ' selected'
+  color1.className += ' selected'
 
 function generateColor() {
   const letters = '0123456789ABCDEF';
