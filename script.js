@@ -1,11 +1,11 @@
 window.onload = function() {
   
-
+  let buttonErase = document.getElementById('clear-board');
   let buttonRandomColor = document.getElementById('button-random-color');
-  let color1 = document.getElementById('color1')
-  let color2 = document.getElementById('color2')
-  let color3 = document.getElementById('color3')
-  let color4 = document.getElementById('color4')
+  let color1 = document.getElementById('color1');
+  let color2 = document.getElementById('color2');
+  let color3 = document.getElementById('color3');
+  let color4 = document.getElementById('color4');
   
   
   color1.style.backgroundColor = 'black'
@@ -40,6 +40,10 @@ buttonRandomColor.addEventListener("click", function() {
     addClassToLocalStorage()
 })
 
+buttonErase.addEventListener("click", function() {
+  for (let i = 0; i < document.getElementById('pixel-board').children.length; i++)
+  document.getElementById('pixel-board').children[i].style.backgroundColor = null
+})
 
 color1.addEventListener("click", function() {
   color1.className = 'color selected'
