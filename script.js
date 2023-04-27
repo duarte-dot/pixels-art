@@ -94,7 +94,7 @@ colors.color2.addEventListener('click', () => selectColor(colors.color2));
 colors.color3.addEventListener('click', () => selectColor(colors.color3));
 colors.color4.addEventListener('click', () => selectColor(colors.color4));
 
-let pixels = document.querySelectorAll('.pixel');
+const pixels = document.querySelectorAll('.pixel');
 
 const savePixelsToLocalStorage = () => {
   const pixelColors = Array.from(pixels).map((pixel) => pixel.style.backgroundColor);
@@ -115,34 +115,6 @@ const addPixelFunction = () => {
 };
 addPixelFunction();
 
-const boardSizeInput = document.getElementById('board-size');
-const generateBoardButton = document.getElementById('generate-board');
-const pixelBoard = document.getElementById('pixel-board');
-
-function checkBoard() {
-  alert('Board inválido!');
-}
-
-function generateBoard() {
-  const boardSize = parseInt(boardSizeInput.value, 10);
-  console.log(boardSize);
-  if (boardSize === '' || boardSize === 0 || boardSize > 60) { checkBoard(); return; }
-  pixelBoard.innerHTML = '';
-  pixelBoard.style.cssText = `width: ${boardSize * 40}px; height: ${boardSize * 40}px`;
-  for (let i = 0; i < boardSize ** 2; i += 1) {
-    pixelBoard.appendChild(Object.assign(document.createElement('div'), { className: 'pixel' }));
-  }
-  pixels = document.querySelectorAll('.pixel');
-  addPixelFunction();
-  localStorage.setItem('boardSize', JSON.stringify({
-    width: pixelBoard.style.width,
-    height: pixelBoard.style.height,
-  }));
-  localStorage.removeItem('pixelBoard');
-}
-
-generateBoardButton.addEventListener('click', generateBoard);
-
 const buttonClearBoard = document.getElementById('clear-board');
 
 const handleClearPixels = () => {
@@ -154,17 +126,9 @@ const handleClearPixels = () => {
 };
 buttonClearBoard.addEventListener('click', handleClearPixels);
 
-const setBoardSizeFromLocalStorage = () => {
-  const storedBoardSize = JSON.parse(localStorage.getItem('boardSize'));
+const setStoredPixels = () => {
   const storedPixels = JSON.parse(localStorage.getItem('pixelBoard'));
-  if (storedBoardSize) {
-    const width = parseInt(storedBoardSize.width, 10);
-    const height = parseInt(storedBoardSize.height, 10);
 
-    const boardSize = Math.floor(Math.min(width, height) / 40);
-    boardSizeInput.value = boardSize;
-    generateBoard();
-  }
   if (storedPixels) {
     pixels.forEach((pixel, index) => {
       const pixelElement = pixel;
@@ -173,4 +137,4 @@ const setBoardSizeFromLocalStorage = () => {
   }
 };
 
-setBoardSizeFromLocalStorage();
+setStoredPixels();
