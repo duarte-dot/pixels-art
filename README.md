@@ -1,13 +1,5 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Pixels art
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+Um dos meus primeiros projetos em front-end. Consiste em um quadro de pixels 5x5 em que você pode pintar com uma paleta de cores com a funcionalidade de gerar cores aleatórias. As cores e sua arte serão salvas no Local Storage então ao reiniciar a página continuarão lá.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+Para visualizar o projeto, faça um clone do repositório e abra o index.html com a extensão Live Server do VSCode.
