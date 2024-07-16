@@ -1,5 +1,5 @@
-# Pixels art
+# Pixels Art
 
-Um dos meus primeiros projetos em front-end. Consiste em um quadro de pixels 5x5 em que você pode pintar com uma paleta de cores com a funcionalidade de gerar cores aleatórias. As cores e sua arte serão salvas no Local Storage então ao reiniciar a página continuarão lá.
+One of my first front-end projects. It consists of a 5x5 pixel canvas where you can paint using a color palette with the functionality to generate random colors. The colors and your artwork will be saved in Local Storage so they will persist even after refreshing the page.
 
-Para visualizar o projeto, faça um clone do repositório e abra o index.html com a extensão Live Server do VSCode.
+To view the project, clone the repository and open index.html using the Live Server extension in VSCode.
